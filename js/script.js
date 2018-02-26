@@ -1,5 +1,11 @@
 function submit(value) {
-    console.log(value);
+    if (value.length > 0) {
+        console.log(value);
+        const list = $("#todo_list");
+        list.append('<li>'+value+'</li>')
+    } else {
+        alert("Submission must not be empty.");
+    }
 }
 
 const input = $("#input");
