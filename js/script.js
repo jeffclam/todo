@@ -1,14 +1,19 @@
 const $list = $("#todo_list");
 
-$list.on("click",".incomplete", function () {
+$list.on("click",".item", function () {
     console.log( $(this).text());
-    $(this).attr("class", "complete");
+    const status = $(this).attr("class");
+    if (status === "item incomplete") {
+        $(this).attr("class", "item complete");
+    } else {
+        $(this).attr("class", "item incomplete");
+    }
 });
 
 function submit(value) {
     if (value.length > 0) {
         console.log(value);
-        $list.append('<li class="incomplete">'+value+'</li>')
+        $list.append('<li class="item incomplete">'+value+'</li>')
     } else {
         alert("Submission must not be empty.");
     }
