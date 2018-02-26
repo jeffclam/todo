@@ -1,0 +1,6 @@
+.incomplete {
+    color: rgb(4, 41, 122);
+}
+.complete {
+    color: rgb(0, 90, 38);
+}
